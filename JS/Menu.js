@@ -8,7 +8,7 @@ $(document).ready(function ()
     {
         if(confirm("Are you sure you want to close the page ?"))
         {
-            close();
+            window.close();
         }
     });
 
@@ -28,7 +28,7 @@ $(document).ready(function ()
     {
         if(confirm("Are you sure you want to save the page ?"))
         {
-            var canvasURL = ($('#canvas')[0]).toDataURL("image/png");
+            var canvasURL = ($('#canvas')[0]).toDataURL("image/png").replace("image/png","image/octet-stream");
             window.open(canvasURL);
         }
     });
@@ -37,7 +37,7 @@ $(document).ready(function ()
         {
             if(confirm("Are you sure you want to save the page ?"))
             {
-                var canvasURL = ($('#canvas')[0]).toDataURL("image/png");
+                var canvasURL = ($('#canvas')[0]).toDataURL("image/png").replace("image/png","image/octet-stream");
                 window.open(canvasURL);
             }
         });
