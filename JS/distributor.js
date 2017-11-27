@@ -11,6 +11,8 @@ $(document).ready(function () {
 	context.lineWidth = radius*2;
 	ColorPallete();
 	Radius(10);
+    context.fillStyle = 'white';
+    context.fillRect(0,0,window.innerWidth,window.innerHeight);
 	
 	$("img").click(function () {
 		rejime = $(this).attr("id");

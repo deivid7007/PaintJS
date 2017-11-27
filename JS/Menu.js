@@ -24,6 +24,14 @@ $(document).ready(function ()
     		n = 0
     	}
     });
+    $('#SaveButtonIcon').click(function(e)
+    {
+        if(confirm("Are you sure you want to save the page ?"))
+        {
+            var canvasURL = ($('#canvas')[0]).toDataURL("image/png");
+            window.open(canvasURL);
+        }
+    });
 
     $('#SaveButton').click(function(e)
         {
